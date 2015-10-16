@@ -1,0 +1,148 @@
+.dropdown1 dd,
+.dropdown1 dt,
+.dropdown1 ul {
+    margin: 0px;
+    padding: 0px;
+}
+.dropdown1 dd {
+    position: relative;
+}
+.dropdown1 a,
+.dropdown1 a:visited {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+.dropdown1 a:hover {
+    color: #fff;
+}
+.dropdown1 dt a:hover {
+    color: #fff;
+}
+.dropdown1 dt a {
+    background: url(../images/arrow.png) no-repeat scroll right center;
+    display: block;
+    padding-right: 20px;
+    /*--height:38px;
+	 /*--border-radius: 0 0 4px 4px;--*/
+    /*-- width:150px; --*/
+}
+.dropdown1 dt a span {
+    cursor: pointer;
+    display: block;
+    padding: 12px 10px;
+    font-size: 0.8125em;
+    text-transform: uppercase;
+    color: #000;
+}
+.dropdown1 dd ul {
+    background: #555 none repeat scroll 0 0;
+    color: #fff;
+    display: none;
+    left: 0px;
+    padding: 5px 0px;
+    position: absolute;
+    top: 13px;
+    width: auto;
+    min-width: 200px;
+    list-style: none;
+}
+.dropdown1 span.value {
+    display: none;
+}
+.dropdown1 dd ul li a {
+    padding: 5px;
+    display: block;
+    font-size: 13px;
+}
+.dropdown1 dd ul li a:hover {
+    background-color: #444;
+}
+.dropdown1 img.flag {
+    border: none;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.flagvisibility1 {
+    float: right;
+}
+/*--dropdown--*/
+
+.dropdown1 {
+    display: block;
+    display: inline-block;
+    border-right: 1px solid #FFF;
+    padding-right: 66%;
+    position: relative;
+    z-index: 9999;
+}
+/* ===[ For demonstration ]=== */
+/* ===[ End demonstration ]=== */
+
+.dropdown1 .dropdown_button {
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    padding: 4px 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 29px;
+    text-decoration: none !important;
+    background: #595959;
+    font-size: 11px;
+}
+.dropdown1 input[type="checkbox"]:checked + .dropdown_button {} .dropdown input[type="checkbox"] + .dropdown_button .arrow {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+.dropdown1 input[type="checkbox"]:checked + .dropdown_button .arrow {
+    border-color: white transparent transparent transparent
+}
+.dropdown1 .dropdown_content {
+    position: absolute;
+    border: 1px solid #777;
+    padding: 0px;
+    background: #595959;
+    margin: 0;
+    display: none;
+}
+.dropdown1 .dropdown_content li {
+    list-style: none;
+    margin-left: 0px;
+    line-height: 16px;
+    border-top: 1px solid #5F5D5D;
+    border-bottom: 1px solid #555353;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.dropdown1 .dropdown_content li:hover {
+    border-top-color: #555;
+    border-bottom-color: #555;
+    background: #444;
+}
+.dropdown1 .dropdown_content li a {
+    display: block;
+    padding: 2px 7px;
+    padding-right: 15px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+.dropdown1 .dropdown_content li:hover a {
+    color: white;
+    text-decoration: none !important;
+}
+.dropdown1 input[type="checkbox"]:checked ~ .dropdown_content {
+    display: block
+}
+.dropdown1 input[type="checkbox"] {
+    display: none
+}

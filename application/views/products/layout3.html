@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+	margin-left: 0pt;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+#Container {
+	margin-right: auto;
+	margin-left: auto;
+	border-width: 0px;
+	border-style: solid;
+}
+#Header {
+	height: 100px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	border-width: 0px;
+	border-style: solid;
+}
+#NavBar {
+	height: 50px;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	border-width: 0px;
+	border-style: solid;
+}
+#MainContainer {
+	height: auto;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	border-width: 0px;
+	border-style: solid;
+}
+#Footer {
+	height: 100px;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	border-width: 0px;
+	border-style: solid;
+}
+#Left {
+	float: left;
+	height: 60px;
+	width: 300px;
+}
+#LeftL {
+	float: left;
+	/* [disabled]height: 400px; */
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+}
+#Right {
+	height: 200px;
+	width: 300px;
+	float: right;
+}
+#SubCat {
+	float: right;
+	height: 400px;
+	width: 300px;
+}
+#Space {
+	float: right;
+	height: 40px;
+	width: 300px;
+	border-width: 0px;
+	border-style: solid;
+}
+</style>
+</head>
+
+<body>
+<div id="Container">
+  <div id="Header"></div>
+  <div id="NavBar"></div>
+  <div id="MainContainer">
+    <div id="LeftL">
+      <p style="text-align: center; font-size: 24px;">New Products</p>
+      <p style="font-size: 16px">&nbsp;</p>
+      <table width="625" border="0">
+        <tr>
+          <td width="331" height="49" align="left" valign="middle"><span style="font-size: 16px"> Product Name</span></td>
+          <td width="284"><span style="font-size: 16px">
+            <input type="text" name="name" id="name">
+          </span></td>
+        </tr>
+        <tr>
+          <td height="44" align="left" valign="middle"><span style="font-size: 16px">Product Category</span></td>
+          <td><span style="font-size: 16px">
+            <input type="text" name="category" id="category">
+          </span></td>
+        </tr>
+        <tr>
+          <td height="43" align="left" valign="middle"><span style="font-size: 16px"> Product Subcategory</span></td>
+          <td><span style="font-size: 16px">
+            <input type="text" name="subcategory" id="subcategory">
+          </span></td>
+        </tr>
+        <tr>
+          <td height="39" align="left">Description</td>
+          <td><span style="font-size: 16px">
+            <input type="text" name="description" id="description">
+          </span></td>
+        </tr>
+        <tr>
+          <td height="42" align="left" valign="middle">Unit Price</td>
+          <td><span style="font-size: 16px">
+            <input type="text" name="price" id="price">
+          </span></td>
+        </tr>
+        <tr>
+          <td height="59" align="left" valign="middle">Quantity</td>
+          <td><span style="font-size: 16px">
+            <input type="text" name="quantity" id="quantity">
+          </span></td>
+        </tr>
+        <tr>
+          <td height="80" align="left" valign="middle">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="right" valign="middle"><input name="submit" type="submit" id="submit" value="Add Product"></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left" valign="middle">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <p style="font-size: 16px">&nbsp;</p>
+    </div>
+    <div id="Right">
+      <p style="font-size: 22px; text-align: center; font-weight: bold;">Product Categories</p>
+      <table width="300" border="0">
+        <tr>
+          <td width="147">&nbsp;</td>
+          <td width="143">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="57">Product Category</td>
+          <td><input type="text" name="p_CategoryC" id="p_CategoryC"></td>
+        </tr>
+        <tr>
+          <td height="36" align="right"><input type="button" name="submit_NewCategory" id="submit_NewCategory" value="Add Category"></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+    </div>
+    <div id="Space"></div>
+    <div id="SubCat" style="text-align: center">	 
+      <p style="font-size: 22px; font-weight: bold;">Product Subcategory</p>
+      <table width="300" border="0">
+        <tr>
+          <td width="139" height="49">Product Category</td>
+          <td width="151"><input type="text" name="p_CategoryS" id="p_CategoryS"></td>
+        </tr>
+        <tr>
+          <td height="49">Product Subcategory</td>
+          <td><input type="text" name="p_SubCategoryS" id="p_SubCategoryS"></td>
+        </tr>
+        <tr>
+          <td height="74" align="right"><input type="button" name="submit_NewCategory2" id="submit_NewCategory2" value="Add Category"></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <p style="font-size: 22px; font-weight: bold;">&nbsp;</p>
+    </div>
+  </div>
+  <div id="Footer"></div>
+</div>
+</body>
+</html>

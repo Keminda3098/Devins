@@ -1,0 +1,265 @@
+.border123{
+	    border: 1px solid black;
+	
+}
+
+.border111 {
+	    border: 1px solid black;	
+}
+
+.borderForHistory {
+	    border: 3px solid #0EB1C5;
+	    background-color: #FFFFFF;
+}
+
+
+.borderForHistoryImage {
+	    width : 300px;
+}
+
+.borderForHistoryImageForStatus {
+	    width : 100px;
+}
+.complete {
+	margin-top:1%;
+}
+
+.complete input[type="submit"] {
+	width: 100px;
+	background: #005580;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 3px 5px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
+.complete input[type="button"] {
+	width: 100px;
+	background: #005580;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 3px 5px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
+
+.cancellation input[type="button"] {
+	width: 150px;
+	background: #005580;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 3px 5px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
+.cancellation input[type="submit"] {
+	width: 150px;
+	background: #005580;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 3px 5px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
+
+.order input[type="submit"] {
+	width: 220px;
+	height: 50px;
+	background: #000000;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 3px 5px;
+	/* border-radius: 5px; */
+	border-left: 4px solid #000000;
+	border-right: 4px solid #000000;
+	border-bottom: 4px solid #000000;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	
+	;
+}
+
+.order input[type="button"] {
+	width: 220px;
+	height: 50px;
+	background: #000000;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 3px 5px;
+	/* border-radius: 5px; */
+	border-left: 4px solid #000000;
+	border-right: 4px solid #000000;
+	border-bottom: 4px solid #000000;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	
+	;
+}
+
+.orderHistory input[type="button"] {
+	width: 210px;
+	height: 45px;
+	background: #245588;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 2px 2px;
+	/* border-radius: 5px; */
+	border-left: 4px solid #245588;
+	border-right: 4px solid #245588;
+	border-bottom: 4px solid #245588;
+	border-top: 4px solid #245588;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+
+}
+
+
+.label {
+	width: 220px;
+	height: 50px;
+	background: #000000;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 3px 5px;
+	/* border-radius: 5px; */
+	border-left: 4px solid #FFFFFF;
+	border-right: 4px solid #FFFFFF;
+	border-bottom: 4px solid #FFFFFF;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	
+	;
+}
+
+
+.alert {
+padding: 8px 35px 8px 14px;
+margin-bottom: 18px;
+color: #c09853;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+background-color: #fcf8e3;
+border: 1px solid #fbeed5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+
+.btnPay {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #3b8bdb;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #3a80c7 5%, #2c7dcf 100% );
+	background:-ms-linear-gradient( top, #3a80c7 5%, #2c7dcf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a80c7', endColorstr='#2c7dcf');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #3a80c7), color-stop(100%, #2c7dcf) );
+	background-color:#3a80c7;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:1px 1px 0px #2f76bd;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #498fd1;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #498fd1;
+ 	box-shadow:inset 1px 1px 0px 0px #498fd1;
+}.btnPay:hover {
+	background:-moz-linear-gradient( center top, #2c7dcf 5%, #3a80c7 100% );
+	background:-ms-linear-gradient( top, #2c7dcf 5%, #3a80c7 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c7dcf', endColorstr='#3a80c7');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #2c7dcf), color-stop(100%, #3a80c7) );
+	background-color:#2c7dcf;
+}.btnPay:active {
+	position:relative;
+	top:1px;
+}
