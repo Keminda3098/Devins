@@ -15,48 +15,48 @@ class SessionDetailCaller extends CI_Controller {
         $this->page2 = "useract";
         $this->load->model('SessionDetailModel');
     }
-    
+
     function CallDropDown_User() {
-           if($this -> input -> post('selectn')){
-             $val = $this -> input -> post('selectn');
-           $data['groups'] =$this->SessionDetailModel->gettodropdown();
-           $data['query'] = $this->SessionDetailModel->gettallbyuname($val);
-             $this->load->view('common/header');
+        if ($this->input->post('submit2')) {
+            $val = $this->input->post('selectn2');
+            $data['query'] = $this->SessionDetailModel->gettallbyuname($val);
+             // For Filtering Dropdown
+            $data['groups'] = $this->SessionDetailModel->gettodropdown();
+            $data['groups1'] = $this->SessionDetailModel->gettodropdowndate();
+            // END - For Filtering Dropdown
+            $this->load->view('common/header');
             $this->load->view('profile/Adminuserprofilemanagement', $data);
-               $this->load->view('common/footer');
-         }
+            $this->load->view('common/footer');
+        }
     }
-     function CallDropDown_Date() {
-           if($this -> input -> post('selectn')){
-             $val = $this -> input -> post('selectn');
-           $data['groups'] =$this->SessionDetailModel->gettodropdown();
-           $data['query'] = $this->SessionDetailModel->gettallbydate($val);
-             $this->load->view('common/header');
+
+    function CallDropDown_Date() {
+        if ($this->input->post('submit1')) {
+            $val = $this->input->post('selectn1');
+            $data['query'] = $this->SessionDetailModel->gettallbydate($val);
+             // For Filtering Dropdown
+            $data['groups'] = $this->SessionDetailModel->gettodropdown();
+            $data['groups1'] = $this->SessionDetailModel->gettodropdowndate();
+            // END - For Filtering Dropdown
+            $this->load->view('common/header');
             $this->load->view('profile/Adminuserprofilemanagement', $data);
-               $this->load->view('common/footer');
-         }
-    }
-     function CallDropDown_ip() {
-           if($this -> input -> post('selectn')){
-             $val = $this -> input -> post('selectn');
-           $data['groups'] =$this->SessionDetailModel->gettodropdown();
-           $data['query'] = $this->SessionDetailModel->gettall($val);
-             $this->load->view('common/header');
-            $this->load->view('profile/Adminuserprofilemanagement', $data);
-               $this->load->view('common/footer');
-         }
+            $this->load->view('common/footer');
+        }
     }
 
     public function index() {
 
         if ($this->input->get('page') == $this->page1) {
             $this->load->model('SessionDetailModel');
+
             $data['query'] = $this->SessionDetailModel->getsessiondetails();
-            $data['groups'] =$this->SessionDetailModel->gettodropdown();
-       
+            // For Filtering Dropdown
+            $data['groups'] = $this->SessionDetailModel->gettodropdown();
+            $data['groups1'] = $this->SessionDetailModel->gettodropdowndate();
+            // END - For Filtering Dropdown
             $this->load->view('common/header');
             $this->load->view('profile/Adminuserprofilemanagement', $data);
-                  $this->load->view('common/footer');
+            $this->load->view('common/footer');
         } else if ($this->input->get('page') == $this->page2) {
             $this->load->model('UserLogModel');
             $data['query'] = $this->UserLogModel->getonlinedetails();
