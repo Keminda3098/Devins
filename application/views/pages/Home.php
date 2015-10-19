@@ -17,7 +17,7 @@
                <article style="position: relative; width: 100%; opacity: 0;">
                   <div class="banner-wrap">
                      <div class="slider-left">
-                        <img src="<?php print $row -> s_Url; ?>" alt="">
+                        <img src="<?php echo base_url(); ?><?php print $row -> s_Url; ?>" alt="">
                      </div>
                      <div class="slider-right">
                         <h1><?php print $row -> s_Bname; ?></h1>
@@ -85,7 +85,7 @@
                      </a>
                      <ul class="list" style="left: 25%; position: relative;">
                         <li>
-                           <a> <img alt="" src="images/upload.png" style="margin: 0 0 0 5%"> </a>
+                           <a> <img alt="" src="<?php echo base_url(); ?>images/upload.png" style="margin: 0 0 0 5%"> </a>
                            <ul class="icon1 sub-icon1 profile_img">
                               <li>
                                  <a class="active-icon c1" href="<?php echo base_url()?>index.php?page=ud">Upload Design</a>
@@ -112,7 +112,7 @@
                      </a>
                      <ul class="list" style="left: 25%; position: relative;">
                         <li>
-                           <a> <img alt="" src="images/new.png" style="margin: 0 0 0 5%"> </a>
+                           <a> <img alt="" src="<?php echo base_url(); ?>images/new.png" style="margin: 0 0 0 5%"> </a>
                            <ul class="icon1 sub-icon1 profile_img">
                               <li>
                                  <a class="active-icon c1" href="#">New Products</a>

@@ -38,8 +38,7 @@ class VerifyLogin extends CI_Controller {
  
   function check_database($password)
  {
-   
-   $username = $this->input->post('username');
+      $username = $this->input->post('username');
  
    $result = $this->user->login($username, $password);
  
@@ -54,16 +53,10 @@ class VerifyLogin extends CI_Controller {
          'username' => $row->username
             
        );
-       
-   
-           
-	 
+    
      }  
-     
-
-               $loggedtime= date('Y-m-d H:i:s'); 
+     $loggedtime= date('Y-m-d H:i:s'); 
                $loggedouttime = '';
-
 $this->session->set_userdata('username', $row->username);
 $this->session->set_userdata('login_time', $loggedtime);
 $this->session->set_userdata('logout_time', $loggedouttime);
@@ -100,7 +93,7 @@ $this->session->set_userdata('logout_time', $loggedouttime);
 			}
 			else 
 			{
-				$this -> load -> model('get_db');
+		$this -> load -> model('get_db');
 		$data['query'] = $this -> get_db -> getAllDBToView();
 		$data['query1'] = $this -> get_db -> getSliderToView();
 		$this -> load -> view('common/header');

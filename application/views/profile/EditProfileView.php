@@ -6,11 +6,11 @@ $username = $_SESSION['username']; // Must be already set
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link id="bootstrap-style" href="<?php echo base_url(); ?>profile_css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>profile_css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link id="base-style" href="<?php echo base_url(); ?>profile_css/css/style.css" rel="stylesheet">
-        <link id="base-style-responsive" href="<?php echo base_url(); ?>profile_css/style-responsive.css" rel="stylesheet">
-
+       <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/dist/css/AdminLTE.min.css">
         <script>
             $(document).ready(function () {
                 $("#datepicker").datepicker();
@@ -64,138 +64,203 @@ $username = $_SESSION['username']; // Must be already set
         </style>					
 
     </head>
-    <body Style="font-family: Verdana">
-
-        <!-- start: Header -->
-
-        <div class="container-fluid-full">
-            <div class="row-fluid">
-
-                <!-- start: Main Menu -->
-                <div id="sidebar-left" class="span2">
-                    <div class="nav-collapse sidebar-nav">
-
-                        <ul class="nav nav-tabs nav-stacked main-menu">
-                            <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Profile &nbsp; <span class="badge">5</span></span></a></li>	
-                            <li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
-                            <li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Security</span></a></li>
-                            <li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet">Requests</span></a></li>
-                            <li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Purchases</span></a></li>
+   <body class="skin-blue sidebar-mini">
+        <div style="float:left">
+            <aside class="main-sidebar">
 
 
-                        </ul>
+                <section style="height:500px;" class="sidebar">
+
+                    <div class="user-panel">
+
+
                     </div>
-                </div>
-                <!-- end: Main Menu -->
 
-                <noscript>
-                <div class="alert alert-block span10">
-                    <h4 class="alert-heading">Warning!</h4>
+                    <form action="#" method="get" class="sidebar-form">
 
-                </div>
-                </noscript>
-
-                <!-- start: Content -->
-                <div id="content" class="span10">
+                    </form>
 
 
-                    <ul class="breadcrumb">
-                        <li>
-                            <i class="icon-home"></i>
+                    <ul class="sidebar-menu">
 
-                            <i class="icon-angle-right"></i>
+                        <li class="treeview active">
+                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/SessionDetailCaller?page=usermanage">
+                                <i class="fa fa-dashboard"></i> <span>Profile</span> <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+
                         </li>
-                        <li>Profile</li>
-                    </ul>
+                        <li class="treeview">
+                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/SessionDetailCaller?page=paymentsprof">
+                                <i class="fa fa-files-o"></i>
+                                <span>Payments</span>
+                                <span class="label label-primary pull-right">4</span>
+                            </a>
 
-                    <!-- start: Content -->
-                    <table style=" width:930px;text-align: left;height:230px; background-color:#0EB1C5" >
-                        <tr>
-                            <th width = "30px"></th>
-                            <th >
-                        <table  >  
-                         
-
-                                <tr style="height:70px;">
-                                    <td style="color: #FFF; width:400px; ">User Name</td>
-                                    <td style="color: #FFF; width:400px;"><input type = "text" ></td>
-                                    <td></td></tr> 
-
-                                <tr style=  "height:70px;">
-                                    <td style="color: #FFF; width:400px; font-family: Verdana " >First Name</td>
-                                    <td style="color: #FFF; width:400px;">
-                                       <input type = "text"  class="form-control">
-
-                                    </td><td ></td>
-                                </tr>
-                                <tr style="height:70px;">
-                                    <td style="color: #FFF;  width:400px; font-family: Verdana">Last name</td>
-                                    <td style="color: #FFF; width:400px;"><input type = "text" class="form-control">
-                                    </td><td>
-                                    </td>
-                                </tr>
-                                <tr style="height:70px;">
-                                    <td style="color: #FFF;  width:400px;font-family: Verdana ">Email </td>
-                                    <td style="color: #FFF; width:400px;">
-                                        <input type = "text"  class="form-control"> </td>
-                                    <td width="329"> 
-                                    </td>
-                                </tr>  
-                        </table>
-                        </th>
-                        <th>
-
-                        <table>
+                        </li>
+                        <li>
+                            <a href="../widgets.html">
+                                <i class="fa fa-th"></i> <span>Update Profile</span> <small class="label pull-right bg-green">new</small>
+                            </a>
+                        </li>
+                        <li class="treeview">
 
 
-                            <tr style="height:70px;">
-                                <td style="color: #FFF;  width:400px; font-family: Verdana" >Age</td>
-                                <td width="300">
-                                  <input type = "text" class="form-control" >
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  style="color: #FFF;  width:400px; font-family: Verdana" >Address</td>
-
-                            </td><td>
-                            <textarea></textarea>
-                        </td>
-                    </tr>
+                        </li>
+                      
 
 
-
-                </table>
+                        <li>
+                            <a href="../mailbox/mailbox.html">
+                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
+                                <small class="label pull-right bg-yellow">12</small>
+                            </a>
+                        </li>
 
 
 
 
-                </th>
 
-                <th>
+                        <li></li>
+                        </ul>
+                </section>
 
+            </aside>
+ </div>
+                 
+              
+<div style="min-height:1096px;" class="content-wrapper">
+       <div class="content body">
+           <section class="content">
 
-                    <span class="btn btn-default btn-file">
-                        <input id="uploadImage1" type="file" name="userfile" onchange="PreviewImage(1);" />
-                    </span>
+          <div class="row">
+            <div class="col-md-3">
 
+              <!-- Profile Image -->
+              <div class="box box-primary">
+                <div class="box-body box-profile">
+                  <img class="profile-user-img img-responsive img-circle" src="" >
+                  <h3 class="profile-username text-center">Keminda Samaraweera</h3>
+                  <p class="text-muted text-center"></p>
 
+                  <ul class="list-group list-group-unbordered">
+                    <li class="list-group-item">
+                     
+                    </li>
+                    <li class="list-group-item">
+                    
+                    </li>
+                    <li class="list-group-item">
+                     
+                    </li>
+                  </ul>
 
-                    <img id="uploadPreview1" src="http://localhost/devinsnew/templates/yourimage.png" class="img-circle"/>
+                  <a href="#" class="btn btn-primary btn-block"><b>Upload Image</b></a>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
 
-                </th>
+              <!-- About Me Box -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">About Me</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <strong><i class="fa fa-book margin-r-5"></i></strong>
+                  <p class="text-muted">
+                   
+                  </p>
+
+                  <hr>
+
+                  <strong><i class="fa fa-map-marker margin-r-5"></i> </strong>
+                  <p class="text-muted">a</p>
+
+                  <hr>
+
                 
 
-                </tr>
+                  <hr>
 
+                  <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
+                  <p></p>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+            <div class="col-md-9">
+              <div class="nav-tabs-custom">
+               
+                <div class="tab-content">
+                  <div class="active tab-pane" id="maininfo">
+             
+     
+                    
+                  <div class="tab-pane" id="settings">
+                    <form class="form-horizontal">
+                      <div class="form-group">
+                        <label for="inputfName" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="inputName" placeholder="First Name" type="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputlName" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="inputName" placeholder="Last Name" type="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputuName" class="col-sm-2 control-label">Username</label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="inputName" placeholder="Username" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputExperience" class="col-sm-2 control-label">Address</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" id="inputExperience" placeholder="Address"></textarea>
+                        </div>
+                      </div>
+                         <div class="form-group">
+                        <label for="inputExperience" class="col-sm-2 control-label">Mobile</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" id="inputName" placeholder="Experience"></textarea>
+                        </div>
+                      </div>
+                       
+                      <div class="form-group">
+                        <label for="inputSkills" class="col-sm-2 control-label">Country</label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="inputName" placeholder="Skills" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div><!-- /.tab-pane -->
+                </div><!-- /.tab-content -->
+              </div><!-- /.nav-tabs-custom -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
 
-            </table>
+        </section>
+</div>
+           </section>
 
-        </div><!--/.fluid-container-->
+          </div>
+</div>
 
-        <!-- end: Content --> 
-    </div><!--/#content.span10-->
-</div><!--/fluid-row-->
+     
 
 <div class="clearfix"></div>
 

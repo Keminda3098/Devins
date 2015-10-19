@@ -117,7 +117,7 @@
                </div>
                <ul style="float: right">
                	
-               	<?php if($this->session->userdata('username') == null) {?>
+               	<?php if($this->session->userdata('username') == null || $this->session->userdata('username')=='Guest' )  {?>
                   <li>
                      <a href="http://localhost/Devins/index.php?page=signin">Sign In</a>
                   </li>
@@ -125,14 +125,26 @@
                      <a href="http://localhost/Devins/index.php?page=signup">Sign Up</a>
                   </li>
                   <?php  }
-                  elseif ($this->session->userdata('username') != null){?>
+                  else if ($this->session->userdata('username') != null){?>
                   <li>
                      <a> Hello <?php echo $this->session->userdata('username') ?></a>
                   </li>
                   <li>
                      <a href="http://localhost/Devins/index.php?page=logout">Log Out</a>
                   </li>
-                  <?php } ?>
+                   <li>
+                       <?php  if ($this->session->userdata('username') != 'Admin')
+                       {
+                       
+                  ?>   <a href="http://localhost/Devins/index.php/ProfileControllers/ProfileUrlCaller?page=customprof">Profile</a>
+                 <?php } ?>
+                   <?php  if($this->session->userdata('username') == 'Admin')
+                       {
+                       
+                  ?>   <a href="http://localhost/Devins/ProfileControllers/ProfileUrlCaller?page=adminprof">Profile</a>
+                 <?php } ?>
+                  </li>
+                 <?php } ?>
                </ul>
             </div>
 	    <div class="clear"></div>
@@ -142,7 +154,7 @@
          <div class="wrap">
             <ul class="megamenu skyblue">
                <li class="grid">
-                  <a class="color2" href="http://devins.altairsl.us/index.php?page=viewPromotional">Promotional Products</a>
+                  <a class="color2" href="<?php echo base_url(); ?>index.php?page=viewPromotional">Promotional Products</a>
                   <div class="megapanel">
                      <div class="row">
                         <div class="col1">
@@ -151,7 +163,7 @@
                               viewPromotional
                               <ul>
                                  <li>
-                                    <a href="http://devins.altairsl.us/index.php?page=promotionalproducts">Promotional T-Shirts</a>
+                                    <a href="<?php echo base_url(); ?>index.php?page=promotionalproducts">Promotional T-Shirts</a>
                                  </li>
                                  <li>
                                     <a href="shop.html">Sport Wear</a>
@@ -245,7 +257,7 @@
                   </div>
                </li>
                <li class="grid">
-                  <a class="color2" href="http://devins.altairsl.us/index.php?page=viewAdvertising">Advertising</a>
+                  <a class="color2" href="<?php echo base_url(); ?>index.php?page=viewAdvertising">Advertising</a>
                   <div class="megapanel">
                      <div class="row">
                         <div class="col1">
@@ -279,7 +291,7 @@
                   </div>
                </li>
                <li class="grid">
-                  <a class="color2" href="http://devins.altairsl.us/index.php?page=viewHotelProducts">Hotel Products</a>
+                  <a class="color2" href="<?php echo base_url(); ?>index.php?page=viewHotelProducts">Hotel Products</a>
                   <div class="megapanel">
                      <div class="row">
                         <div class="col1">

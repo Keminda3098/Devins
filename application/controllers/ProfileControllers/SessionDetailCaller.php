@@ -45,8 +45,9 @@ class SessionDetailCaller extends CI_Controller {
     }
 
     public function index() {
-
-        if ($this->input->get('page') == $this->page1) {
+    $user = $this->session->userdata('username');
+        if ($this->input->get('page') == $this->page1 && $user=='Admin')
+        {
             $this->load->model('SessionDetailModel');
 
             $data['query'] = $this->SessionDetailModel->getsessiondetails();
@@ -57,7 +58,7 @@ class SessionDetailCaller extends CI_Controller {
             $this->load->view('common/header');
             $this->load->view('profile/Adminuserprofilemanagement', $data);
             $this->load->view('common/footer');
-        } else if ($this->input->get('page') == $this->page2) {
+        } else if ($this->input->get('page') == $this->page2 && $user=='Admin') {
             $this->load->model('UserLogModel');
             $data['query'] = $this->UserLogModel->getonlinedetails();
             $this->load->view('common/header');
@@ -65,7 +66,7 @@ class SessionDetailCaller extends CI_Controller {
             $this->load->view('common/footer');
         } else {
             $this->load->view('common/header');
-            $this->load->view('index.php');
+            $this->load->view('404page');
             $this->load->view('common/footer');
         }
     }

@@ -1,12 +1,6 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-              <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/dist/css/AdminLTE.min.css">
-      
     <meta charset="utf-8">
     <title>AJAX filter demo</title>
     <style>
@@ -65,32 +59,32 @@
   <body> 
     <h1>Temporary worker database</h1>
 
-    <table aria-describedby="example2_info" role="grid" id="employees">
-                                                                                                            <thead>
-                                                                                                                <tr role="row">
-                                                                                                                    <th aria-sort="ascending"  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting_asc">IP Address</th>
-                                                                                                                    <th  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting">Date</th>
-                                                                                                                 
-                                                                                                                    <th  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting">Username</th>
-                                                                                                                    <th  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting">Login Time</th>
-                                                                                                                    <th  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting">Logout Time</th>
-                                                                                                                    <th  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting">User Agent</th>
-                                                                                                                    <th  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting">Status</th>
-                                                                                                                    <th  colspan="1" rowspan="1" aria-controls="example2" tabindex="0" class="sorting">Actions</th>
-                                                                                                                </tr>
-                                                                                                            </thead>
-                                                                                                            <tbody>
-                                                                                                            </tbody>
+    <table id="employees">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Car</th>
+          <th>Language</th>
+          <th>Nights</th>
+          <th>Student</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
     </table>
+
     <div id="filter">
       <h2>Filter options</h2>
       <div>
-        <input type="checkbox" id="car" name="sessionend">
-        <label for="car">Online</label>
+        <input type="checkbox" id="car" name="hasCar">
+        <label for="car">Has own car</label>
       </div>
       <div>
-        <input type="checkbox" id="language" name="nameofus">
-        <label for="language">Name Admin</label>
+        <input type="checkbox" id="language" name="speaksForeignLanguage">
+        <label for="language">Can speak foreign language</label>
       </div>
       <div>
         <input type="checkbox" id="nights" name="canWorkNights">
@@ -144,19 +138,20 @@
       updateEmployees();
     </script> 
     
+    
     <?php 
   $pdo = new PDO('mysql:host=localhost;dbname=devins', 'root', '');
   $select = 'SELECT *';
-  $from = ' FROM ci_sessions';
+  $from = ' FROM workers';
   $where = ' WHERE TRUE';
   $opts = isset($_POST['filterOpts'])? $_POST['filterOpts'] : array('');
 
-  if (in_array("sessionend", $opts)){
-    $where .= " AND session_end = 0";
+  if (in_array("hasCar", $opts)){
+    $where .= " AND hasCar = 1";
   }
 
-  if (in_array("nameofus", $opts)){
-    $where .= " AND username = admin";
+  if (in_array("speaksForeignLanguage", $opts)){
+    $where .= " AND speaksForeignLanguage = 1";
   }
 
   if (in_array("canWorkNights", $opts)){
@@ -172,7 +167,7 @@
   $statement->execute();
   $results = $statement->fetchAll(PDO::FETCH_ASSOC);
   $json = json_encode($results);
- 
+  
 ?>
   </body> 
 </html>
