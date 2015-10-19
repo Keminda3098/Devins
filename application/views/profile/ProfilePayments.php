@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/dist/css/AdminLTE.min.css">
          <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/dist/css/skins/_all-skins.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     </head>
    
        
@@ -67,15 +69,22 @@
     <body class="skin-blue sidebar-mini">
         <div style="float:left">
             <aside class="main-sidebar">
+ <section style="height:500px;" class="sidebar">
 
-                <section style="height:500px;" class="sidebar">
+                    <div class="user-panel">
 
-                  
+
+                    </div>
+
+                    <form action="#" method="get" class="sidebar-form">
+
+                    </form>
+
 
                     <ul class="sidebar-menu">
 
                         <li class="treeview active">
-                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=customprof">
+                         <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=customprof">
                                 <i class="fa fa-dashboard"></i> <span>Profile</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
 
@@ -101,17 +110,12 @@
 
 
                         <li>
-                            <a href="../mailbox/mailbox.html">
+                               <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=usermailbox">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="label pull-right bg-yellow">12</small>
                             </a>
                         </li>
-
-
-
-
-
-                        <li></li>
+<li></li>
                     </ul>
                 </section>
 
@@ -216,17 +220,23 @@
                         <i class="fa fa-envelope bg-blue"></i>
                         <div class="timeline-item">
                           <span class="time"><i class="fa fa-clock-o"></i> </span>
-                          <h3 class="timeline-header">You Purchased <?php print $row->Name;?> </h3>
+                          <h3 class="timeline-header">You Ordered <?php print $row->Name;?> </h3>
                           <div class="timeline-body">
                           
-                          </div>
+                          </div>                              </br>
+
                           <div class="timeline-footer">
                          
                              <div class="timeline-footer">
                              Category : <?php print $row->Cat;?>
-                          </div> 
+                          </div>                               </br>
+
                                <div class="timeline-footer">
                              Quantity : <?php print $row->Qty;?>
+                          </div> 
+                              </br>
+                              <div class="timeline-footer">
+                             Status : <?php print $row->paid;?>
                           </div> 
                          
                         </div>

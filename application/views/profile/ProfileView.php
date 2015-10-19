@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/dist/css/AdminLTE.min.css">
          <link rel="stylesheet" href="<?php echo base_url(); ?>profile_css/dist/css/skins/_all-skins.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
     </head>
    
        
@@ -82,8 +85,8 @@
 
                     <ul class="sidebar-menu">
 
-                        <li class="treeview active">
-                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/SessionDetailCaller?page=usermanage">
+                        <li class="treeview ">
+                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=customprof">
                                 <i class="fa fa-dashboard"></i> <span>Profile</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
 
@@ -109,7 +112,7 @@
 
 
                         <li>
-                            <a href="../mailbox/mailbox.html">
+                             <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=usermailbox">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="label pull-right bg-yellow">12</small>
                             </a>
@@ -137,7 +140,7 @@
                                         <img class="profile-user-img img-responsive img-circle" src="<?php echo base_url() . '/' . $row->profilepicurl; ?>" >
                                         <h3 class="profile-username text-center"><?php print $row->fname . ' ' . $row->lname; ?> </h3>
                                         <p class="text-muted text-center"></p>
-                                        <a href="#" class="btn btn-primary btn-block"><b>Upload Image</b></a>
+                                        
                                     </div>
                                 </div>
 
@@ -147,7 +150,7 @@
                                         <h3 class="box-title">About Me</h3>
                                     </div>
                                     <div class="box-body">
-                                        <strong><i class="fa fa-book margin-r-5"></i></strong>
+                                        <strong>Update Your Profile to Add Something about Your Self</strong>
                                         <p class="text-muted">
                                         </p>
 

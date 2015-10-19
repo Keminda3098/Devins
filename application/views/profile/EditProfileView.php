@@ -69,7 +69,7 @@ $username = $_SESSION['username']; // Must be already set
             <aside class="main-sidebar">
 
 
-                <section style="height:500px;" class="sidebar">
+               <section style="height:500px;" class="sidebar">
 
                     <div class="user-panel">
 
@@ -84,13 +84,13 @@ $username = $_SESSION['username']; // Must be already set
                     <ul class="sidebar-menu">
 
                         <li class="treeview active">
-                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/SessionDetailCaller?page=usermanage">
+                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=customprof">
                                 <i class="fa fa-dashboard"></i> <span>Profile</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
 
                         </li>
                         <li class="treeview">
-                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/SessionDetailCaller?page=paymentsprof">
+                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=paymentsprof">
                                 <i class="fa fa-files-o"></i>
                                 <span>Payments</span>
                                 <span class="label label-primary pull-right">4</span>
@@ -98,7 +98,7 @@ $username = $_SESSION['username']; // Must be already set
 
                         </li>
                         <li>
-                            <a href="../widgets.html">
+                            <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=editprofile">
                                 <i class="fa fa-th"></i> <span>Update Profile</span> <small class="label pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -106,11 +106,11 @@ $username = $_SESSION['username']; // Must be already set
 
 
                         </li>
-                      
+
 
 
                         <li>
-                            <a href="../mailbox/mailbox.html">
+                                <a href="<?php echo base_url() ?>index.php/ProfileControllers/ProfileUrlCaller?page=usermailbox">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="label pull-right bg-yellow">12</small>
                             </a>
@@ -121,7 +121,7 @@ $username = $_SESSION['username']; // Must be already set
 
 
                         <li></li>
-                        </ul>
+                    </ul>
                 </section>
 
             </aside>
